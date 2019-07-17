@@ -1,0 +1,88 @@
+.header{
+    padding:20px;
+    background-image: url("../images/header_photo.svg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media(max-width:765px){
+        grid-template-columns: 1fr;
+    }
+    img{
+        width: 65%;
+        @media(max-width:850px){
+            width: 300px;
+        }
+    }
+    .mobile{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        #menu{
+            width:50px;
+            height:40px;
+            border:none;
+            background-color:transparent;
+            justify-self:flex-end;
+            outline: none;
+        }
+        nav{
+            text-align: center;
+            grid-column: 1/3;
+            display:none;
+        }
+        @media(min-width:765px) {
+            display:none;
+        }
+    }
+    .wide{
+        @media(max-width:765px){
+            display:none;
+        }
+    }
+    nav{
+        
+        text-align: right;
+        text-transform: uppercase;
+        padding: 20px;
+        a{
+            transition:all 0.3s linear;
+            color:rgb(58, 53, 53);
+            text-decoration: none;
+            &:hover{
+                color: white;
+                border-bottom: 5px solid rgb(0, 181, 210);
+            }
+            &:active{
+                border:none;
+            }
+            padding-bottom: 35px;
+            margin: 2% 5%;    
+        }
+    }
+    @at-root #{&}-intro{
+        width:100%;
+        height: 520px;
+        margin: 15% 3% 0px 3%;
+        color: white;
+        p{
+            padding-right: 140px;
+            line-height: 45px;
+            text-shadow:1px 1px 3px black;
+            font-size: $fs*1.3;
+        }
+        @media(max-width: 1145px){
+            margin:10% 3% 0px 3%;
+            .button{
+                font-size: $fs*1.15;
+            } 
+        }
+        @media(max-width: 785px){
+            grid-column: 1/3;
+            text-align: center;
+            p{
+                padding:2px;
+            }
+        }
+    }
+}

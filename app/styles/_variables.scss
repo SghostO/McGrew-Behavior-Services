@@ -1,0 +1,40 @@
+$fs:100%;
+$main:rgba(192, 186, 186, 0.603);
+
+@mixin mp($margTopBot, $margLR, $padTopBot, $padLR) {
+    margin:$margTopBot $margLR;
+    padding:$padTopBot, $padLR;
+}
+body{
+    @include mp(0,0,0,0);
+    overflow-x: hidden;
+    font-family:'Lato', sans-serif;
+}
+.button{
+    cursor:pointer;
+    color:white;
+    background-color:rgb(225,170,110);
+    border: 0px;
+    box-shadow:0px 10px 1px rgb(186, 142,91);
+    font-size: $fs*1.65;
+    text-transform: uppercase;
+    margin: 2% 20px 2% 0px;
+    padding: 15px 10%;
+    text-align: center;
+    transition:all 1.2s ease;
+    &:hover{
+        box-shadow: 1px 1px 5px rgb(186,142,91);
+        border-radius:4px;
+    }
+}
+h1{
+    font-weight: bold;
+    font-size: $fs*4;
+    padding-bottom: 22px;
+    text-shadow: 1px 1px 3px black;
+    span{
+        border-bottom: 4px solid rgb(0, 181, 210);
+        padding-bottom: 20px;
+    }
+}
+
